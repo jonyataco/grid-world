@@ -1,0 +1,11 @@
+V(states) = 0
+Returns = []
+Loop for number_iterations:
+	episode = generateEpisode
+	G = 0
+	For each step in the episode:
+		G = gamma*G + Reward_at_time_step_plus_one
+		Unless the state has already appeared before:
+			Append G to Returns
+			V(state) = average(Returns(state))
+

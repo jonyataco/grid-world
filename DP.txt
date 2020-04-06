@@ -1,0 +1,9 @@
+iterative_policy_evaluation(policy):
+	intialize_value_of_states(states)
+	Loop num_iterations:
+		For each state in state_space
+			For each action in state
+				nextState, action = getNextStateAndAction(state, action)
+				weightedReward += (1/num_actions)*(reward + (gamma * value_grid[nextState[0], nextState[1]]))
+			V(state) = weightedReward
+		
