@@ -1,5 +1,4 @@
 # This program illustrates iterative policy evaluation
-
 import numpy as np
 
 # defining the parameters to be used

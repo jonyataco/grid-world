@@ -13,7 +13,7 @@ terminationStates = [[0,0], [GRID_SIZE - 1, GRID_SIZE - 1]]
 # the actions that are to be used, which correspond to:
 # up, down, left, right.
 actions = [[0,1], [0, -1], [-1,0], [1,0]]
-iterations = 1000
+iterations = 2000
 value_grid = np.zeros((GRID_SIZE,GRID_SIZE))
 states = [[i,j] for i in range (GRID_SIZE) for j in range(GRID_SIZE)]
 
@@ -21,7 +21,7 @@ def takeAction(initialState, action):
     if list(initialState) in terminationStates:
         return None, 0
     nextState = np.array(initialState) + np.array(action)
-    # If the actino causes the agent to go out of bounds, then
+    # If the action causes the agent to go out of bounds, then
     # have it stay in place.
     if -1 in list (nextState) or GRID_SIZE in list(nextState):
         nextState = initialState
